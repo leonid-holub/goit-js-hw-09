@@ -14,7 +14,6 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    console.log(selectedDates);
     goalDate = selectedDates[0];
     endTime = goalDate.getTime();
     startTime = Date.now();
