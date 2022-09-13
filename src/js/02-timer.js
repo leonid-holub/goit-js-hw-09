@@ -3,6 +3,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import 'flatpickr/dist/flatpickr.min.css';
 import flatpickr from 'flatpickr';
 
+let goalDate;
 let endTime;
 let startTime;
 let timeDiference;
@@ -13,7 +14,6 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    goalDate = selectedDates[0];
     endTime = goalDate.getTime();
     startTime = Date.now();
     timeDiference = endTime - startTime;
